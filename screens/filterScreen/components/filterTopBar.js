@@ -8,7 +8,9 @@ export default function FilterTopBar(props) {
   return (
     <View style={filtersScreenStyles.topBarContainer}>
       <Icon name="chevron-left" size={34} color="black" />
+
       <Text style={filtersScreenStyles.topBarHeading}>{props.title}</Text>
+
       <Link
         onPress={() => {}}
         label="CANCEL"

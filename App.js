@@ -16,6 +16,7 @@ export default function App() {
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
       <SignIn />
+
       <Filters></Filters>
     </ScrollView>
   );

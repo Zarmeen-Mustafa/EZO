@@ -44,6 +44,7 @@ export default function SignIn() {
           inputContainerStyle={signInScreenStyles.inputContainer}
           returnKeyType="next"
         />
+
         <Input
           ref={(input) => (refPasswordField.current = input)}
           onSubmitEditing={() => signIn()}

@@ -31,11 +31,13 @@ export default function Filters() {
   return (
     <View>
       <FilterTopBar title="Filter" />
+
       {Object.entries(groupedFilters).map(([groupKey, groupOfFilters]) => (
         <View key={groupKey} style={filtersScreenStyles.group}>
           <Text style={filtersScreenStyles.filterGroupHeading}>
             {groupKey.toUpperCase()}
           </Text>
+
           <View style={filtersScreenStyles.filtersList}>
             {Object.entries(groupOfFilters).map(([key, filter]) => (
               <Chip
