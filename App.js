@@ -1,21 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { ScrollView, StyleSheet } from "react-native";
+import SignIn from "./screens/signInScreen/signIn";
+import { useFonts } from "expo-font";
+import AppLoading from "expo-app-loading";
+import { FONTS } from "./assets/fonts/fonts";
+import Filters from "./screens/filterScreen/filters";
 
 export default function App() {
+  let [fontsLoaded] = useFonts(FONTS);
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+      <SignIn />
+      <Filters></Filters>
+    </ScrollView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const styles = StyleSheet.create({});
