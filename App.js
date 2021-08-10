@@ -1,10 +1,12 @@
 import React from "react";
 import { ScrollView, StyleSheet } from "react-native";
 import SignIn from "./screens/signInScreen/signIn";
+import DashboardTopBar from "./screens/dashBoard/dashboardTopBar";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 import { FONTS } from "./assets/fonts/fonts";
 import Filters from "./screens/filterScreen/filters";
+import { Divider } from "react-native-elements/dist/divider/Divider";
 
 export default function App() {
   let [fontsLoaded] = useFonts(FONTS);
@@ -15,9 +17,12 @@ export default function App() {
 
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-      <SignIn />
+      {/* <SignIn /> */}
 
-      <Filters></Filters>
+      {/* <Filters /> */}
+
+      <DashboardTopBar />
+      <Divider />
     </ScrollView>
   );
 }
